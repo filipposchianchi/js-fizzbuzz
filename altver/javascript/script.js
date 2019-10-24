@@ -4,30 +4,18 @@
 // Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
 
 for(var i =1; i < 101; i++) {
-    var stampa;
+
     if(i % 3 === 0 && i % 5 === 0) {
-        stampa = "FizzBuzz"
+        document.getElementById("lista").innerHTML += "<li class='fizzbuzz'> FizzBuzz </li>";
         console.log("FizzBuzz");
     } else if (i % 3 === 0) {
-        stampa = "Fizz"
+        document.getElementById("lista").innerHTML += "<li class='fizz'> Fizz </li>";
         console.log("Fizz");
     } else if (i % 5 === 0 ) {
-        stampa = "Buzz"
+        document.getElementById("lista").innerHTML += "<li class='buzz'> Buzz </li>"
         console.log("Buzz");
-    }
-    else {
-        stampa = i
+    } else {
+        document.getElementById("lista").innerHTML += "<li class='numero'>" + i +  "</li>";
         console.log(i);
     }
-
-    if(stampa === "FizzBuzz") {
-        document.getElementById("lista").innerHTML += "<li class='fizzbuzz'>" + stampa +  "</li>";
-    } else if (stampa === "Fizz") {
-        document.getElementById("lista").innerHTML += "<li class='fizz'>" + stampa +  "</li>";
-    } else if (stampa === "Buzz") {
-        document.getElementById("lista").innerHTML += "<li class='buzz'>" + stampa +  "</li>"
-    } else {
-        document.getElementById("lista").innerHTML += "<li class='numero'>" + stampa +  "</li>";
-    }
-    
 }
